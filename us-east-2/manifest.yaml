@@ -76,7 +76,7 @@ spec:
         version: v1.0.2
     spec:
       containers:
-        - image: argoproj/rollouts-demo:green
+        - image: argoproj/rollouts-demo:orange
           imagePullPolicy: Always
           name: canary-demo
           ports:
