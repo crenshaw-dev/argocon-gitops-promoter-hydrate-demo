@@ -123,6 +123,15 @@ kubectl create secret -n promoter-system generic argo-app \
   --from-literal=appID=<your app ID here>
 ```
 
+Create the same secret in the `argocd` namespace for CommitStatuses.
+
+```shell
+kubectl create secret -n argocd generic argo-app \
+  --from-literal=privateKey="$(cat private-key.pem)" \
+  --from-literal=installationID=<your installation ID here> \
+  --from-literal=appID=<your app ID here>
+```
+
 ### Set up the hydrator
 
 Create a secret with the private key, the installation ID, and the app ID.
