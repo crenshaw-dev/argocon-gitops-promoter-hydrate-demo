@@ -1,0 +1,14 @@
+resources:
+  - https://raw.githubusercontent.com/argoproj/argo-cd/refs/heads/hydrator-ui/manifests/install-with-hydrator.yaml
+  - argocd-cm.yaml
+  - gitrepo.yaml
+  - hcap-cs.yaml
+  - scmProvider.yaml
+
+patches:
+  - path: argocd-cmd-params-cm.yaml
+
+images:
+  - name: quay.io/argoproj/argocd:latest
+    newName: docker.io/crenshawdotdev/argocd
+    newTag: hydrator-e39fe3a5f

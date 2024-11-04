@@ -6,4 +6,3 @@ resources:
   - staging.yaml
   - production.yaml
   - promotion-strategy.yaml 
-

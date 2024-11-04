@@ -10,4 +10,4 @@ metadata:
 spec:
   github: {}
   secretRef:
-    name: my-auth-promotion
+    name: argo-app

@@ -6,4 +6,4 @@ metadata:
 spec:
   github: {}
   secretRef:
-    name: my-auth
+    name: argo-app
