@@ -1,4 +1,4 @@
 .idea
-my-overlay
+./my-overlay/
 private-key.pem
-secret.yaml
+./secret.yaml

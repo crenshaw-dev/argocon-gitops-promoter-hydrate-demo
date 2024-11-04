@@ -1,0 +1,52 @@
+resources:
+- ../demo-configuration/argocd-applications
+
+patches:
+- target:
+    group: argoproj.io
+    kind: Application
+    name: development
+  patch: |-
+    - op: replace
+      path: /spec/sourceHydrator/drySource/repoURL
+      value: https://github.com/crenshaw-dev/argocon-gitops-promoter-hydrate-demo
+- target:
+    group: argoproj.io
+    kind: Application
+    name: production-use2
+  patch: |-
+    - op: replace
+      path: /spec/sourceHydrator/drySource/repoURL
+      value: https://github.com/crenshaw-dev/argocon-gitops-promoter-hydrate-demo
+- target:
+    group: argoproj.io
+    kind: Application
+    name: production-usw1
+  patch: |-
+    - op: replace
+      path: /spec/sourceHydrator/drySource/repoURL
+      value: https://github.com/crenshaw-dev/argocon-gitops-promoter-hydrate-demo
+- target:
+    group: argoproj.io
+    kind: Application
+    name: e2e-staging
+  patch: |-
+    - op: replace
+      path: /spec/sourceHydrator/drySource/repoURL
+      value: https://github.com/crenshaw-dev/argocon-gitops-promoter-hydrate-demo
+- target:
+    group: argoproj.io
+    kind: Application
+    name: integration-staging
+  patch: |-
+    - op: replace
+      path: /spec/sourceHydrator/drySource/repoURL
+      value: https://github.com/crenshaw-dev/argocon-gitops-promoter-hydrate-demo
+- target:
+      group: argoproj.io
+      kind: Application
+      name: promotion-strategy
+  patch: |-
+    - op: replace
+      path: /spec/source/repoURL
+      value: https://github.com/crenshaw-dev/argocon-gitops-promoter-hydrate-demo
