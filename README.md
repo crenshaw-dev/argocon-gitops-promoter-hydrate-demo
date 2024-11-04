@@ -145,3 +145,4 @@ kubectl create secret -n argocd generic hydrator-app \
   --from-literal=githubAppID=<your app ID here>
 kubectl label secret -n argocd hydrator-app argocd.argoproj.io/secret-type=repository-write
 ```
+
