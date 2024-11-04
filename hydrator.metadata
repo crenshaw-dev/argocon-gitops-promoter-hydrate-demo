@@ -1,0 +1,7 @@
+{
+  "repoURL": "https://github.com/crenshaw-dev/argocon-gitops-promoter-hydrate-demo",
+  "drySha": "9b95de9c1f13c4993c343db8628cb602e99b6978",
+  "commands": [
+    "kustomize build ./user-configuration/development"
+  ]
+}
