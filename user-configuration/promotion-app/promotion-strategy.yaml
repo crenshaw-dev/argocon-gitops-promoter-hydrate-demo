@@ -3,7 +3,6 @@ kind: PromotionStrategy
 metadata:
   annotations:
   name: argocon-demo
-  namespace: default
 spec:
   activeCommitStatuses:
   - key: healthy
