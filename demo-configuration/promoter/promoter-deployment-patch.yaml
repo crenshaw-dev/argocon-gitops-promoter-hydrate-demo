@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: promoter-controller-manager
+  namespace: promoter-system
+spec:
+  template:
+    spec:
+      containers:
+        - args:
+            # These make reconciliation faster for the demo.
+            - --promotion-strategy-requeue-duration=5s
+            - --proposed-commit-requeue-duration=5s
+            # These match upstream.
+            - --health-probe-bind-address=:8081
+            - --metrics-bind-address=127.0.0.1:8080
+            - --leader-elect
+          name: manager

@@ -1,2 +1,5 @@
 resources:
   - https://raw.githubusercontent.com/argoproj-labs/gitops-promoter/refs/heads/main/dist/install.yaml
+
+patches:
+  - path: promoter-deployment-patch.yaml

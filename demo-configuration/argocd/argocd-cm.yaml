@@ -21,11 +21,12 @@ data:
       actions["hcap off"] = {["disabled"] = false}
       return actions
     definitions:
-    - name: "hcapon"
+    - name: "hcap on"
       action.lua: |
         obj.metadata.annotations.hcapActive = "true"
         return obj
-    - name: "hcapoff"
+    - name: "hcap off"
       action.lua: |
         obj.metadata.annotations.hcapActive = "false"
         return obj
+  timeout.reconciliation: '5s'

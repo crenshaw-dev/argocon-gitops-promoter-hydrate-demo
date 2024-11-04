@@ -11,4 +11,4 @@ patches:
 images:
   - name: quay.io/argoproj/argocd:latest
     newName: docker.io/crenshawdotdev/argocd
-    newTag: hydrator-5dcc05198
+    newTag: hydrator-fb358a313
